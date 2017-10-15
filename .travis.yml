@@ -6,5 +6,8 @@ rvm:
 services:
   - mysql
 
+before_install:
+  - mysql -e 'CREATE DATABASE travis-example_test;'
+
 install:
   - bundle install
